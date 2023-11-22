@@ -28,7 +28,7 @@ class AuthActivity : AppCompatActivity() {
             settings.javaScriptCanOpenWindowsAutomatically = true
         }
 
-        val url = "https://auth.phone.email/sign-in?countrycode=$PHONE_COUNTRY" +
+        val url = "https://www.phone.email/auth/sign-in?countrycode=$PHONE_COUNTRY" +
                 "&phone_no=$PHONE_NUMBER" +
                 "&auth_type=1"
 

@@ -1,4 +1,3 @@
-# sign-in-with-phone-android
 # Sign-in with Phone Android Project
 
 Welcome to the Sign-in with Phone Android project! This project demonstrates a seamless user authentication flow in an Android app using JSON Web Tokens (JWT) and the Activity Result API.
@@ -18,11 +17,12 @@ Follow the steps below to incorporate the "Login with Phone" feature into your A
 
 4. **Implementing AuthActivity:**
    AuthActivity is responsible for verifying the phone number through a web-based authentication process. Upon successful verification, the JWT is obtained from a JavaScript interface and set as the result.
+   Replace the placeholder mobile details in the AuthActivity (PHONE_COUNTRY and PHONE_NUMBER) with your registered mobile information.
 
-5. **Managing the JWT in the Calling Activity:**
+6. **Managing the JWT in the Calling Activity:**
    Handle the JWT obtained from the `AuthActivity` within the calling activity's `launcher` callback, enabling further actions based on the JWT.
 
-6. **Conclusion:**
+7. **Conclusion:**
    Customize the authentication logic and error handling based on your app's requirements.
 
 ## Project Structure
