@@ -1,4 +1,11 @@
 <resources>
-    <string name="app_name">Sign in with phone demo</string>
+    <string name="app_name">Demo - Sign in with phone</string>
     <string name="sign_in_with_phone">Sign in with Phone</string>
+    <string name="phone_details">%s</string>
+    <string name="you_are_logged_in_with">You are logged in with</string>
+    <string name="sign_in_text">Try Sign In demo</string>
+    <string name="sign_in_description">Below button demonstrate the usage of Sign In button</string>
+    <string name="logout">Logout</string>
+
+
 </resources>

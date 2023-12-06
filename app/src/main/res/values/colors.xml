@@ -8,4 +8,5 @@
     <color name="magenta_700">#FF97028D</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="card_background">#cfe2ff</color>
 </resources>
