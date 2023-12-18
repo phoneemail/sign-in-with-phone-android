@@ -33,7 +33,7 @@ class AuthActivity : AppCompatActivity() {
 
         deviceId = Settings.Secure.getString(contentResolver, Settings.Secure.ANDROID_ID)
 
-        val url = "https://www.phone.email/auth/sign-in?countrycode=$PHONE_COUNTRY" +
+        val url = "https://auth.phone.email/sign-in?countrycode=$PHONE_COUNTRY" +
                 "&phone_no=$PHONE_NUMBER" +
                 "&auth_type=1" +
                 "&device=$deviceId"
