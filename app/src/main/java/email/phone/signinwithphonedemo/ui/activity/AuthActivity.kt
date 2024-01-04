@@ -1,7 +1,6 @@
-package email.phone.signinwithphonedemo
+package email.phone.signinwithphonedemo.ui.activity
 
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.provider.Settings
@@ -18,8 +17,8 @@ import email.phone.signinwithphonedemo.databinding.ActivityAuthBinding
 class AuthActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityAuthBinding
-    private val PHONE_COUNTRY = "+xx"
-    private val PHONE_NUMBER = "xxxxxxxxxx"
+    private val PHONE_COUNTRY = "+91"
+    private val PHONE_NUMBER = "7000432063"
     private var deviceId = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,6 +37,8 @@ class AuthActivity : AppCompatActivity() {
                 "&auth_type=1" +
                 "&device=$deviceId"
 
+        Log.d("TAG", " URL: $url")
+
         binding.wvAuth.addJavascriptInterface(WebAppInterface(this),"Android")
         binding.wvAuth.loadUrl(url)
         binding.wvAuth.webViewClient = client
@@ -46,6 +47,7 @@ class AuthActivity : AppCompatActivity() {
     private val client = object : WebViewClient() {
         override fun shouldOverrideUrlLoading(view: WebView, url: String?): Boolean {
             // Handle the URL loading within the WebView
+            Log.d("client", "shouldOverrideUrlLoading: URL: $url")
             if (url != null) {
                 view.loadUrl(url)
             }

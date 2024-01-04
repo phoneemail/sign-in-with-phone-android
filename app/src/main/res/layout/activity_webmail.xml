@@ -7,7 +7,7 @@
     tools:context=".ui.activity.MainActivity">
 
 
-    <WebView android:id="@+id/wvAuth"
+    <WebView android:id="@+id/wvMail"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
