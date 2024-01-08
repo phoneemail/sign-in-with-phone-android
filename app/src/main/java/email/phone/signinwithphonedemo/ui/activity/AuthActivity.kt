@@ -17,8 +17,8 @@ import email.phone.signinwithphonedemo.databinding.ActivityAuthBinding
 class AuthActivity : AppCompatActivity() {
 
     lateinit var binding: ActivityAuthBinding
-    private val PHONE_COUNTRY = "+91"
-    private val PHONE_NUMBER = "7000432063"
+    private val PHONE_COUNTRY = "+**"
+    private val PHONE_NUMBER = "**********"
     private var deviceId = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
