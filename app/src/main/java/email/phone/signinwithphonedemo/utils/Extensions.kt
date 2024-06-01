@@ -5,6 +5,9 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Paint
 import android.graphics.drawable.Drawable
+import android.net.ConnectivityManager
+import android.net.NetworkCapabilities
+import android.os.Build
 import android.os.Bundle
 import android.text.Editable
 import android.text.SpannableString
@@ -39,6 +42,30 @@ val Any.TAG: String
         } else {
             val name = javaClass.name
             if (name.length <= 23) name else name.substring(name.length - 23, name.length)// last 23 chars
+        }
+    }
+val Context.isConnected: Boolean
+    get() {
+        val connectivityManager =
+            this.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        return when {
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.M -> {
+                val nw = connectivityManager.activeNetwork ?: return false
+                val actNw = connectivityManager.getNetworkCapabilities(nw) ?: return false
+                when {
+                    actNw.hasTransport(NetworkCapabilities.TRANSPORT_WIFI) -> true
+                    actNw.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR) -> true
+                    else -> false
+                }
+            }
+
+            else -> {
+                // Use depreciated methods only on older devices
+                @Suppress("DEPRECATION")
+                val nwInfo = connectivityManager.activeNetworkInfo ?: return false
+                @Suppress("DEPRECATION")
+                nwInfo.isConnected
+            }
         }
     }
 

@@ -6,6 +6,6 @@
     <string name="sign_in_text">Try Sign In demo</string>
     <string name="sign_in_description">Below button demonstrate the usage of Sign In button</string>
     <string name="logout">Logout</string>
-
+    <string name="no_internet">No internet available.</string>
 
 </resources>

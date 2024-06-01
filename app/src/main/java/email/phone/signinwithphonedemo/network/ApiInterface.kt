@@ -19,4 +19,8 @@ interface ApiInterface {
     @FormUrlEncoded
     @POST("email-count")
     fun getEmailCount(@Field("merchant_phone_email_jwt") jwt:String, @Field("source") source:String): Call<JsonObject>
+
+    @FormUrlEncoded
+    @POST("getuser")
+    fun getUserInfo(@Field("access_token") accessToken:String, @Field("client_id") clientId:String): Call<JsonObject>
 }

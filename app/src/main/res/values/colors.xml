@@ -10,4 +10,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="card_background">#cfe2ff</color>
     <color name="background_count">#dc3545</color>
+    <color name="button_background_green">#02BD7E</color>
 </resources>

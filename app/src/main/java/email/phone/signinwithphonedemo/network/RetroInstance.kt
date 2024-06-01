@@ -25,7 +25,7 @@ class RetroInstance {
             return Retrofit.Builder()
                 .client(client)
                 .baseUrl(AppConstants.BASE_URL)
-                .addConverterFactory(ScalarsConverterFactory.create())
+//                .addConverterFactory(ScalarsConverterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
         }
