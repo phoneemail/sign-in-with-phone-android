@@ -13,14 +13,14 @@ Follow the steps below to incorporate the "Login with Phone" feature into your A
    In your app's login screen, implement the login button click listener to launch the `AuthActivity` using the Activity Result API.
 
 3. **Handling Results with the Launcher:**
-   Register an activity result launcher to handle the result of the `AuthActivity`, extracting the JWT from the result data.
+   Register an activity result launcher to handle the result of the `AuthActivity`, extracting the access token from the result data.
 
 4. **Implementing AuthActivity:**
-   AuthActivity is responsible for verifying the phone number through a web-based authentication process. Upon successful verification, the JWT is obtained from a JavaScript interface and set as the result.
-   Replace the placeholder mobile details in the AuthActivity (PHONE_COUNTRY and PHONE_NUMBER) with your registered mobile information.
+   AuthActivity is responsible for verifying the phone number through a web-based authentication process. Upon successful verification, the access token is obtained from a JavaScript interface and set as the result.
+   Replace the placeholder client id in AppConstants (CLIENT_ID) with your account client id.
 
-6. **Managing the JWT in the Calling Activity:**
-   Handle the JWT obtained from the `AuthActivity` within the calling activity's `launcher` callback, enabling further actions based on the JWT.
+6. **Managing the Access Token in the Calling Activity:**
+   Handle the access token obtained from the `AuthActivity` within the calling activity's `launcher` callback, enabling further actions based on the access token.
 
 7. **Conclusion:**
    Customize the authentication logic and error handling based on your app's requirements.
@@ -38,7 +38,7 @@ The project is organized as follows:
 
 - AndroidX
 - WebView
-- nimbus-jose-jwt
+- retrofit
 
 ## Usage
 
