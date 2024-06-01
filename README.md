@@ -7,7 +7,7 @@ Welcome to the Sign-in with Phone Android project! This project demonstrates a s
 Follow the steps below to incorporate the "Login with Phone" feature into your Android app:
 
 1. **Acquire the API Key:**
-   Obtain the necessary API key from [Phone Email App](https://play.google.com/store/apps/details?id=email.phone.app)  to enable secure communication with the authentication service.
+   Obtain the necessary API key from [Phone Email Admin Dashboard](https://admin.phone.email/)  to enable secure communication with the authentication service.
 
 2. **Implementing the Login Button:**
    In your app's login screen, implement the login button click listener to launch the `AuthActivity` using the Activity Result API.
